@@ -1,3 +1,6 @@
+body{
+background-color: black;
+}
 :root {
     --primary: #2563eb;
     --primary-light: #60a5fa;
