@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: var(--white);
+  display: flex;
 }
 :root {
   --primary: #0e2352;
