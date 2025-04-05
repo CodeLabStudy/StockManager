@@ -17,19 +17,19 @@
         <nav>
           <ul class="side-menu">
             <li>
-              <a href="">
+              <a href="#estoque" class="tab-link active" data-tab="estoque">
                 <i class="bx bx-package"></i>
                 <span class="text">Estoque</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#fornecedores" class="tab-link" data-tab="fornecedores">
                 <i class="bx bx-group"></i>
                 <span class="text">Fornecedores</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" class="tab-link">
                 <i class="bx bx-bar-chart-alt"></i>
                 <span class="text">Gráficos</span>
               </a>
@@ -40,7 +40,43 @@
     </aside>
     <main>
       <div class="container">
-        <section id="Fornecedores">
+        <section id="estoque" class="tab-content active">
+          <div id="form-produto">
+            <h2>Cadastro de Produtos</h2>
+            <form>
+              <label for=" nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+              <label for="marca">Marca:</label>
+              <input type="text" name="marca" id="marca" required />
+              <label for="preco">Preço:</label>
+              <input type="number" step="0.01" id="preco" required />
+              <input type="submit" id="btn-form" value="Cadastrar" />
+            </form>
+          </div>
+          <table class="table-padrao">
+            <caption>
+              Estoque
+            </caption>
+            <thead>
+              <th>Nome</th>
+              <th>Quantidade</th>
+              <th>Fornecedor</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Telefone</th>
+                <td>345</td>
+                <td>Loja do celular</td>
+              </tr>
+              <tr>
+                <th>Telefone</th>
+                <td>345</td>
+                <td>Loja do celular</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="fornecedores" class="tab-content">
           <h2>Cadastro de Fornecedores</h2>
           <form id="form-fornecedores">
             <div class="form-group">
@@ -63,19 +99,7 @@
               <input type="text" id="telefone" name="telefone" required />
             </div>
           </form>
-          <div id="produtos">
-            <h2>Cadastro de Produtos</h2>
-            <form>
-              <label for=" nome" >Nome:</label>
-              <input type="text" id="nome" name="nome" required />
-              <label for="marca">Marca:</label>
-              <input type="text" name="marca" id="marca" required />
-              <label for="preco">Preço:</label>
-              <input type="number" step="0.01" id="preco" required/>
-              <input type="submit" id="btn-form" value="Cadastrar"/>
-            </form>
-          </div>
-          <table class="table-padrao">
+          <table class="table-padrao" class="">
             <caption>
               Fornecedores
             </caption>
@@ -103,6 +127,6 @@
         </section>
       </div>
     </main>
-    <script src="https://unpkg.com/imask"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
