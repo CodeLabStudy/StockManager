@@ -47,44 +47,50 @@
               <label for="nome">Nome do Fornecedor:</label>
               <input type="text" id="nome" name="nome" required />
             </div>
-    
+
             <div class="form-group">
               <label for="cnpj">CNPJ:</label>
               <input type="text" id="cnpj" name="cnpj" required />
             </div>
-    
+
             <div class="form-group">
               <label for="email">E-mail:</label>
               <input type="email" id="email" name="email" required />
             </div>
-    
+
             <div class="form-group">
               <label for="telefone">Telefone:</label>
               <input type="text" id="telefone" name="telefone" required />
             </div>
           </form>
+          <table class="table-padrao">
+            <caption>
+              Fornecedores
+            </caption>
+            <thead>
+              <th>Nome</th>
+              <th>CNPJ</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>bodySuplementos</th>
+                <td>5450500433</td>
+                <td>bodySuplementos@gmail.com</td>
+                <td>8194345432</td>
+              </tr>
+              <tr>
+                <th>bodySuplementos</th>
+                <td>5450500433</td>
+                <td>bodySuplementos@gmail.com</td>
+                <td>8194345432</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </div>
     </main>
     <script src="https://unpkg.com/imask"></script>
-    <script>
-      const cnpjInput = document.getElementById("cnpj");
-      IMask(cnpjInput, {
-        mask: "00.000.000/0000-00",
-      });
-    </script>
-    <script>
-      const telefoneInput = document.getElementById("telefone");
-      IMask(telefoneInput, {
-        mask: [
-          {
-            mask: '(00) 0000-0000'
-          },
-          {
-            mask: '(00) 00000-0000'
-          }
-        ]
-      });
-    </script>    
   </body>
 </html>
