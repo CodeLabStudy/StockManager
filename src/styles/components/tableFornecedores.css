@@ -1,0 +1,38 @@
+.table-padrao {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(40, 235, 15, 0.1),
+    0 2px 4px -1px rgba(104, 226, 22, 0.06);
+}
+
+.table-padrao caption {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.table-padrao thead {
+  background-color: var(--primary);
+}
+.table-padrao td,
+th {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+.table-padrao thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+.table-padrao tbody th {
+  font-weight: 600;
+  color: #1275ff;
+}
+.table-padrao tbody tr:nth-child(even) {
+  background-color: #3e4449;
+}
