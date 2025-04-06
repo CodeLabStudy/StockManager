@@ -31,21 +31,15 @@ Centraliza a inicialização dos módulos e funcionalidades do projeto após o c
 ```javascript
 document.addEventListener("DOMContentLoaded", () => {
   InitTabs();
-  // Novas funções
+  // Novas funções podem ser adicionadas aqui
 });
 ```
-
-**Código:**
-
-````javascript
-document.addEventListener("DOMContentLoaded", () => {
-  InitTabs();
-});
 
 
 ### 📄 `tab.js`
 
 **Responsabilidade:**
+
 Gerencia a navegação entre diferentes conteúdos de abas na interface. Ao clicar em uma aba, o módulo ativa o conteúdo correspondente e desativa os demais, controlando dinamicamente as classes CSS.
 
 **Código:**
