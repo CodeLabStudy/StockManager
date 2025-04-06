@@ -25,6 +25,7 @@
 
 Centraliza a inicialização dos módulos e funcionalidades do projeto após o carregamento completo do DOM, garantindo que os scripts sejam executados somente quando os elementos da página estiverem disponíveis.
 
+
 **Código:**
 
 ```javascript
@@ -34,13 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 ```
 
+**Código:**
+
+````javascript
+document.addEventListener("DOMContentLoaded", () => {
+  InitTabs();
+});
+
+
 ### 📄 `tab.js`
 
 **Responsabilidade:**
 Gerencia a navegação entre diferentes conteúdos de abas na interface. Ao clicar em uma aba, o módulo ativa o conteúdo correspondente e desativa os demais, controlando dinamicamente as classes CSS.
 
 **Código:**
-
 ```javascript
 function InitTabs() {
   const tabLinks = document.querySelectorAll(".tab-link");
@@ -60,4 +68,6 @@ function InitTabs() {
 }
 
 export { InitTabs };
+
 ```
+
