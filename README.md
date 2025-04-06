@@ -24,13 +24,23 @@
 **Responsabilidade:**
 
 Centraliza a inicialização dos módulos e funcionalidades do projeto após o carregamento completo do DOM, garantindo que os scripts sejam executados somente quando os elementos da página estiverem disponíveis.
+
+
+**Código:**
+
+```javascript
+document.addEventListener("DOMContentLoaded", () => {
+  InitTabs();
+  // Novas funções
+});
+```
+
 **Código:**
 
 ````javascript
 document.addEventListener("DOMContentLoaded", () => {
   InitTabs();
 });
-
 
 
 ### 📄 `tab.js`
@@ -59,4 +69,5 @@ function InitTabs() {
 
 export { InitTabs };
 
-````
+```
+
