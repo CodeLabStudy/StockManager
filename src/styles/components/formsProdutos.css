@@ -1,0 +1,82 @@
+/* centralizando */
+div.form-group{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/* Personalizando h2 */
+div.form-produto h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--text);
+}
+/* Personalizando submit */
+#btn-form-produto  {
+    width: 60%;
+    height: 50px;
+    display: block;
+    position:relative; top: 10px; left: 18%;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 70px;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-top: 10px;
+    color: var(--text);
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 16px;
+    border: double 1px var(--text-light);
+}
+
+/* personalizando submit quando o mouse passa por cima */
+#btn-form-produto:hover{
+
+    background-color: var(--primary-light);
+    color: white;
+    transition: 0.5s;
+}
+
+/* Personalizando Labels */
+div.form-produto label{
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left ;
+    flex-direction: row;
+    
+}
+
+/* Personalizando inputs */
+
+div.form-produto input[type="text"],
+div.form-produto input[type="number"]{ 
+    width: 60%;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 1px solid var(--text-light);
+    font-size: 16px;
+    color: var(--text);
+    background-color: whitesmoke;
+    flex-direction: row;
+    
+}
+
+div.form-produto input[type="text"]:hover,
+div.form-produto input[type="number"]:hover{
+    border: 1px solid var(--primary-light);
+    transition: 0.5s;
+}
+/* Ajustando o input nome */
+div.form-produto input[id="nome"]{
+    margin-left: 40px;
+}

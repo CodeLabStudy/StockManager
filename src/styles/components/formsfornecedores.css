@@ -1,0 +1,79 @@
+/* Centralizando elementos */
+div.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.form-fornecedores h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--text);
+}
+
+/* Personalizando submit */
+#btn-form-fornecedor  {
+    width: 60%;
+    height: 50px;
+    display: block;
+    position:relative; top: 10px; left: 18%;
+    margin-top: 10px;
+    margin-left: 36px;
+    margin-right: 70px;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-top: 10px;
+    color: var(--text);
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 16px;
+    border: double 1px var(--text-light);
+}
+/* Personalizando submit quando passa o mouse por cima */
+#btn-form-fornecedor:hover{
+    background-color: var(--primary-light);
+    color: white;
+    transition: 0.5s;
+}
+/* Personalizando Labels */
+div.form-fornecedores label{
+    font-size: 18px;
+    color: var(--text);
+    margin-bottom: 10px;
+    margin-left: 5px;
+    flex-direction: row;
+    margin-right: 5px;
+    text-align: left ;
+    
+}
+/* Personalizando inputs */
+div.form-fornecedores input[type="text"],
+div.form-fornecedores input[type="email"]{
+    width: 60%;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 50px;
+    margin-top: 5px;
+    flex-direction: row;
+    border-radius: 15px;
+    border: double 1px var(--text-light);
+    font-size: 16px;
+    background-color: whitesmoke;
+
+}
+   /* Personalizando inputs quando passa o mouse por cima */
+div.form-fornecedores input[type="text"]:hover,
+div.form-fornecedores input[type="email"]:hover{
+    border:1px solid var(--primary-light);
+    color: white;
+    transition: 0.5s;
+}
+div.form-fornecedores input[id="nome"]{
+width: 55%;
+margin-right: 120px;
+margin-left: px;
+
+}
