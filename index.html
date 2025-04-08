@@ -12,35 +12,48 @@
   </head>
   <body>
     <aside id="sidebar">
-      <div class="container">
-        <a class="logo" href="#">Controle de Estoque</a>
-        <nav>
-          <ul class="side-menu">
-            <li>
-              <a href="#estoque" class="tab-link active" data-tab="estoque">
-                <i class="bx bx-package"></i>
-                <span class="text">Estoque</span>
-              </a>
-            </li>
-            <li>
-              <a href="#fornecedores" class="tab-link" data-tab="fornecedores">
-                <i class="bx bx-group"></i>
-                <span class="text">Fornecedores</span>
-              </a>
-            </li>
-            <li>
-              <a href="" class="tab-link">
-                <i class="bx bx-bar-chart-alt"></i>
-                <span class="text">Gráficos</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="sidebar-header">
+        <div class="logo"><a class="logo" href="#">Controle de Estoque</a></div>
+        <div>
+          <button class="sidebar-toggle" id="sidebar-toggle">
+            <i class='bx bx-menu'></i>
+          </button>
+        </div>
       </div>
+        <div class="sidebar-content">
+          <nav class="sidebar-nav">
+            <ul class="side-menu">
+              <li class="nav-item">
+                <a href="#estoque" class="tab-link active" data-tab="estoque">
+                  <i class="bx bx-package"></i>
+                  <span class="text">Estoque</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#fornecedores" class="tab-link" data-tab="fornecedores">
+                  <i class="bx bx-group"></i>
+                  <span class="text">Fornecedores</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="tab-link">
+                  <i class="bx bx-bar-chart-alt"></i>
+                  <span class="text">Gráficos</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
     </aside>
     <main>
-      <div class="container">
+       <header class="header-main">
+        <div class="header-left"><span id="titulo-header">Gerenciamento de estoque</span></div>
+      </header>
+
+     
         <section id="estoque" class="tab-content active">
+          <div class="container-content">
           <div class="form-produto">
             <h2>Cadastro de Produtos</h2>
             <form>
@@ -62,30 +75,34 @@
 
             </form>
           </div>
-          <table class="table-padrao">
-            <caption>
-              Estoque
-            </caption>
-            <thead>
-              <th>Nome</th>
-              <th>Quantidade</th>
-              <th>Fornecedor</th>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Telefone</th>
-                <td>345</td>
-                <td>Loja do celular</td>
-              </tr>
-              <tr>
-                <th>Telefone</th>
-                <td>345</td>
-                <td>Loja do celular</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container" >
+            <table class="table-padrao"> 
+              <thead>
+                <th>Nome</th>
+                <th >Quantidade</th>
+                <th >Preço</th>
+                <th>Fornecedor</th>
+                <th>Ações</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Telefone</td>
+                  <td>345</td>
+                  <td>Loja do celular</td>
+                  <td>LojaDeTelefone</td>
+                </tr>
+                <tr>
+                  <td>Telefone</td>
+                  <td>345</td>
+                  <td>Loja do celular</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         </section>
         <section id="fornecedores" class="tab-content">
+          <div class="container-content">
           <div class="form-fornecedores">
           <h2>Cadastro de Fornecedores</h2>
           <form id="form-fornecedores">
@@ -136,8 +153,8 @@
               </tr>
             </tbody>
           </table>
+        </div>
         </section>
-      </div>
     </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>

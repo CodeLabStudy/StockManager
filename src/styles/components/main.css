@@ -1,6 +1,25 @@
 main {
-  border: 1px solid red;
-  width: calc(100% - 280px);
   flex: 1;
-  min-height: 100%;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-main {
+  height: var(--header-height);
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+#sidebar.collapsed ~ main,
+#sidebar.collapsed ~ .header-main {
+  margin-left: var(--sidebar-collapsed-width);
 }
