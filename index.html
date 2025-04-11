@@ -16,71 +16,75 @@
         <div class="logo"><a class="logo" href="#">Controle de Estoque</a></div>
         <div>
           <button class="sidebar-toggle" id="sidebar-toggle">
-            <i class='bx bx-menu'></i>
+            <i class="bx bx-menu"></i>
           </button>
         </div>
       </div>
-        <div class="sidebar-content">
-          <nav class="sidebar-nav">
-            <ul class="side-menu">
-              <li class="nav-item">
-                <a href="#estoque" class="tab-link active" data-tab="estoque">
-                  <i class="bx bx-package"></i>
-                  <span class="text">Estoque</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#fornecedores" class="tab-link" data-tab="fornecedores">
-                  <i class="bx bx-group"></i>
-                  <span class="text">Fornecedores</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="tab-link">
-                  <i class="bx bx-bar-chart-alt"></i>
-                  <span class="text">Gráficos</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        
+      <div class="sidebar-content">
+        <nav class="sidebar-nav">
+          <ul class="side-menu">
+            <li class="nav-item">
+              <a href="#estoque" class="tab-link active" data-tab="estoque">
+                <i class="bx bx-package"></i>
+                <span class="text">Estoque</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#fornecedores" class="tab-link" data-tab="fornecedores">
+                <i class="bx bx-group"></i>
+                <span class="text">Fornecedores</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="tab-link">
+                <i class="bx bx-bar-chart-alt"></i>
+                <span class="text">Gráficos</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </aside>
     <main>
-       <header class="header-main">
-        <div class="header-left"><span id="titulo-header">Gerenciamento de estoque</span></div>
+      <header class="header-main">
+        <div class="header-left">
+          <span id="titulo-header">Gerenciamento de estoque</span>
+        </div>
       </header>
 
-     
-        <section id="estoque" class="tab-content active">
-          <div class="container-content">
+      <section id="estoque" class="tab-content active">
+        <div class="container-content">
           <div class="form-produto">
             <h2>Cadastro de Produtos</h2>
             <form>
-              <div class ="form-group">
-              <label for=" nome">Nome:</label>
-              <input type="text" id="nome" name="nome" required />
-            </div>
-
-            <div class="form-group">
-              <label for="quantidade">Quanitdade:</label>
-              <input type="number" name="quantidade" id="quantidade" required />
-            </div>
+              <div class="form-group">
+                <label for=" nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
 
               <div class="form-group">
-              <label for="forncedor">Fornecedor:</label>
-              <input type="text"  id="Fornecedor" required />
-            </div>
-            <input type="submit" id="btn-form-produto" value="Cadastrar" />
+                <label for="quantidade">Quanitdade:</label>
+                <input
+                  type="number"
+                  name="quantidade"
+                  id="quantidade"
+                  required
+                />
+              </div>
 
+              <div class="form-group">
+                <label for="forncedor">Fornecedor:</label>
+                <input type="text" id="Fornecedor" required />
+              </div>
+              <input type="submit" id="btn-form-produto" value="Cadastrar" />
             </form>
           </div>
-          <div class="table-container" >
-            <table class="table-padrao"> 
+          <div class="table-container">
+            <table class="table-padrao">
               <thead>
                 <th>Nome</th>
-                <th >Quantidade</th>
-                <th >Preço</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
                 <th>Fornecedor</th>
                 <th>Ações</th>
               </thead>
@@ -100,35 +104,68 @@
             </table>
           </div>
         </div>
-        </section>
-        <section id="fornecedores" class="tab-content">
-          <div class="container-content">
+      </section>
+      <section id="fornecedores" class="tab-content">
+        <div class="container-content">
           <div class="form-fornecedores">
-          <h2>Cadastro de Fornecedores</h2>
-          <form id="form-fornecedores">
-            <div class="form-group">
-              <label for="nome">Nome do Fornecedor:</label>
-              <input type="text" id="fornecedor-nome" name="nome" required />
-            </div>
+            <h2>Cadastro de Fornecedores</h2>
+            <form id="form-fornecedores">
+              <div class="form-group">
+                <label for="nome">Nome do Fornecedor:</label>
+                <input type="text" id="fornecedor-nome" name="nome" required />
+              </div>
 
-            <div class="form-group">
-              <label for="cnpj">CNPJ:</label>
-              <input type="text" id="cnpj" name="cnpj" required />
-            </div>
+              <div class="form-group">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required />
+              </div>
 
-            <div class="form-group">
-              <label for="email">E-mail:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-            <div class="form-group">
-              <label for="telefone">Telefone:</label>
-              <input type="text" id="telefone" name="telefone" required />
-            </div>
-            <input type="submit" id="btn-form-fornecedor" value="Cadastrar" />
-          </div>
-          <div id="" class="cards-fornecedores">
+              <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required />
+              </div>
+              <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required />
+              </div>
 
+              <div class="form-group">
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" required />
+              </div>
+
+              <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required />
+              </div>
+
+              <div class="form-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento" />
+              </div>
+
+              <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required />
+              </div>
+
+              <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required />
+              </div>
+
+              <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required />
+              </div>
+
+              <input type="submit" id="btn-form-fornecedor" value="Cadastrar" />
+            </form>
           </div>
           </form>
 
@@ -161,7 +198,7 @@
             </tbody>
           </table> -->
         </div>
-        </section>
+      </section>
     </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
