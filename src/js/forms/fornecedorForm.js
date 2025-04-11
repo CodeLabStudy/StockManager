@@ -1,4 +1,6 @@
 import Fornecedor from "../entities/fornecedor.js";
+import { fornecedores } from "../data.js";
+import { renderFornecedores } from "../renderFornecedores.js";
 export default function CadastrarFornecedor() {
   const formFornecedores = document.getElementById("form-fornecedores");
   formFornecedores.addEventListener("submit", (event) => {
@@ -13,14 +15,10 @@ export default function CadastrarFornecedor() {
     console.log(telefone);
     const fornecedor = new Fornecedor(nome, cnpj, email, telefone);
     console.log(fornecedor);
-
-    // html
-    const tbody = document.getElementById("tbody-fornecedor");
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${fornecedor.nome}</td>
-      <td>${fornecedor.cnpj}</td>
-      <td>${fornecedor.email}</td>
-      <td>${fornecedor.telefone}</td>`;
-    tbody.appendChild(tr);
+    fornecedores.adicionar(fornecedor);
+    alert(`Fornecedor ${nome} cadastrado com sucesso!`);
+    console.log("Fornecedor cadastrado:", fornecedor);
+    renderFornecedores();
+    formFornecedores.reset();
   });
 }
