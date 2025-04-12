@@ -23,17 +23,17 @@ export function renderFornecedores() {
       
       <div class="card-body">
         <div class="info-row">
-          <i class="fas fa-envelope"></i>
+          <i class='bx bx-envelope'></i>
           <span>${fornecedor.email || "Não informado"}</span>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-phone"></i>
+          <i class='bx bxs-phone' ></i>
           <span>${fornecedor.telefone || "Não informado"}</span>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-map-marker-alt"></i>
+          <i class='bx bx-location-plus'></i>
           <span>${formatarEndereco(fornecedor.endereco)}</span>
         </div>
       </div>
@@ -54,24 +54,12 @@ export function renderFornecedores() {
   adicionarEventListeners();
 }
 
-// Função auxiliar para formatar o endereço
 function formatarEndereco(endereco) {
   if (!endereco) return "Endereço não informado";
-
-  const parts = [
-    endereco.logradouro,
-    endereco.numero,
-    endereco.bairro,
-    endereco.cidade,
-    endereco.estado,
-  ].filter(Boolean);
-
-  return parts.length > 0 ? parts.join(", ") : "Endereço incompleto";
+  return `${endereco.logradouro},${endereco.numero},${endereco.bairro},${endereco.localidade}, - ${endereco.uf}`;
 }
 
-// Função para adicionar eventos aos botões
 function adicionarEventListeners() {
-  // Botões de remover
   document.querySelectorAll(".btn-remover").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const cnpj = e.currentTarget.dataset.cnpj;
@@ -83,7 +71,6 @@ function adicionarEventListeners() {
     });
   });
 
-  // Botões de editar (implementação básica)
   document.querySelectorAll(".btn-editar").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const cnpj = e.currentTarget.dataset.cnpj;
@@ -93,16 +80,11 @@ function adicionarEventListeners() {
   });
 }
 
-// Função auxiliar para preencher formulário de edição
 function preencherFormularioEdicao(fornecedor) {
-  // Implementação depende da sua estrutura de formulário
   console.log("Editando fornecedor:", fornecedor);
-  // Aqui você preencheria um formulário modal com os dados
 }
 
-// Função auxiliar para mostrar notificações
 function showToast(message, type = "success") {
-  // Implementação simples - pode usar biblioteca ou criar seu próprio toast
   const toast = document.createElement("div");
   toast.className = `toast ${type}`;
   toast.textContent = message;
