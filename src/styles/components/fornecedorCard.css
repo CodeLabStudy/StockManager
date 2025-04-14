@@ -1,0 +1,143 @@
+/* Reset básico para garantir consistência */
+.fornecedor-cards-container {
+  width: 100%;
+  min-height: 300px; /* Altura mínima para visualização */
+  background-color: #f8fafc !important; /* Cor de fundo bem visível */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.fornecedor-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .fornecedor-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fornecedor-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fornecedor-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0 !important;
+  display: flex;
+  flex-direction: column;
+  opacity: 1 !important; /* Forçando a aparecer */
+  transform: none !important; /* Removendo transformações */
+}
+
+.fornecedor-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  z-index: 1;
+}
+
+/* Estilos para o conteúdo do card */
+.card-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.badge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.info-row i {
+  margin-right: 0.75rem;
+  color: #64748b;
+  width: 16px;
+  text-align: center;
+}
+
+.info-row span {
+  color: #334155;
+}
+
+.card-actions {
+  display: flex;
+  padding: 1rem;
+  gap: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+}
+
+.btn-editar,
+.btn-remover {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.btn-editar {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn-editar:hover {
+  background-color: #0369a1;
+  color: white;
+}
+
+.btn-remover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-remover:hover {
+  background-color: #b91c1c;
+  color: white;
+}
