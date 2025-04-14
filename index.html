@@ -56,27 +56,28 @@
         <div class="container-content">
           <div class="form-produto">
             <h2>Cadastro de Produtos</h2>
-            <form>
-              <div class="form-group">
-                <label for=" nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required />
-              </div>
+            <form id = "form-produto">
+              <div class ="form-group">
+              <label for=" nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
 
-              <div class="form-group">
-                <label for="quantidade">Quanitdade:</label>
-                <input
-                  type="number"
-                  name="quantidade"
-                  id="quantidade"
-                  required
-                />
-              </div>
+            <div class="form-group">
+              <label for="quantidade">Quantidade:</label>
+              <input type="number" name="quantidade" id="quantidade" required />
+            </div>
 
-              <div class="form-group">
-                <label for="forncedor">Fornecedor:</label>
-                <input type="text" id="Fornecedor" required />
-              </div>
-              <input type="submit" id="btn-form-produto" value="Cadastrar" />
+            <div class="form-group">
+              <label for="preco">Preço:</label>
+              <input type="number" name="preco" id="preco" required />
+            </div>
+
+            <div class="form-group">
+            <label for="fornecedor">Fornecedor:</label>
+            <input type="text"  id="fornecedor" required />
+            </div>
+            <input type="submit" id="btn-form-produto" value="Cadastrar" />
+
             </form>
           </div>
           <div class="table-container">
@@ -88,7 +89,7 @@
                 <th>Fornecedor</th>
                 <th>Ações</th>
               </thead>
-              <tbody>
+              <tbody id="tbody-produto">
                 <tr>
                   <td>Telefone</td>
                   <td>345</td>
